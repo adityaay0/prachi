@@ -2,153 +2,219 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>For Prachu 💌</title>
+<title>For Prachu 💖</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
-  font-family: 'Segoe UI', cursive;
-  background: linear-gradient(120deg, #ffd6e0, #ffe8f0);
-  overflow-x: hidden;
-  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #ffe0ec, #fff5f8);
   color: #333;
+  text-align: center;
+  overflow-x: hidden;
 }
 
-/* floating hearts */
-.heart {
-  position: fixed;
-  bottom: -20px;
-  font-size: 20px;
-  animation: floatUp 6s linear infinite;
-  opacity: 0.6;
-}
-
-@keyframes floatUp {
-  0% { transform: translateY(0); opacity: 0; }
-  50% { opacity: 1; }
-  100% { transform: translateY(-100vh); opacity: 0; }
-}
-
-.container {
-  padding: 40px 20px;
-}
-
+/* title */
 h1 {
-  font-size: 2.5rem;
+  font-family: 'Pacifico', cursive;
+  margin-top: 30px;
+  font-size: 2.2rem;
 }
 
+/* cards */
 .card {
   background: white;
   margin: 20px auto;
   padding: 20px;
   border-radius: 20px;
-  max-width: 500px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  animation: fadeIn 1s ease;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  animation: fadeUp 1s ease;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px);}
-  to { opacity: 1; transform: translateY(0);}
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(20px);}
+  to { opacity:1; transform: translateY(0);}
 }
 
+/* buttons */
 button {
-  padding: 12px 20px;
+  padding: 12px 18px;
+  border-radius: 12px;
   border: none;
-  border-radius: 10px;
   background: #ff7aa2;
   color: white;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
-  transition: 0.3s;
+  margin-top: 10px;
 }
 
 button:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
-.hidden {
-  display: none;
+/* hidden */
+.hidden { display: none; }
+
+/* hearts floating */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  animation: float 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes float {
+  to { transform: translateY(-110vh); opacity:0; }
+}
+
+/* surprise explosion */
+.love {
+  position: fixed;
+  font-size: 18px;
+  animation: pop 1.5s ease forwards;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity:1; }
+  100% { transform: translateY(-100px) scale(1.5); opacity:0; }
+}
+
+/* mini game */
+#catchBox {
+  width: 80px;
+  height: 20px;
+  background: #ff7aa2;
+  margin: 20px auto;
+  position: relative;
+}
+
+.star {
+  position: absolute;
+  font-size: 20px;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<h1>Hey Prachu 💖</h1>
 
-  <h1>Hey Prachu 💖</h1>
+<div class="card">
+  bas kyaaaa 😭<br><br>
+  how are you this chaotic and still my favorite person?
+</div>
 
-  <div class="card">
-    <p>
-      bas kyaaaa… 😭<br><br>
-      I still don’t understand how someone can be this chaotic and still be my favorite person.
-      Like genuinely… how?
-    </p>
-  </div>
+<div class="card">
+  BGMI matches with you =<br><br>
+  50% gameplay 🎮<br>
+  50% your random chaos 💀<br><br>
+  and somehow… that’s what made it perfect.
+</div>
 
-  <div class="card">
-    <p>
-      You remember those BGMI matches?<br><br>
-      Half the time we were playing seriously…<br>
-      and the other half you were just being you 💀<br><br>
-      And somehow… those moments became my favorite.
-    </p>
-  </div>
+<div class="card">
+  <button onclick="showMessage()">Tap this 👀</button>
+  <p id="msg" class="hidden">
+    You make normal moments feel special…<br>
+    and special moments feel unforgettable.
+  </p>
+</div>
 
-  <div class="card">
-    <p>
-      I don’t say this often…<br><br>
-      but you make normal days feel less normal.<br>
-      And chaos feel… kinda peaceful.
-    </p>
-  </div>
+<div class="card">
+  <button onclick="showLetter()">Open this slowly 💌</button>
+  <p id="letter" class="hidden">
+    Prachu,<br><br>
 
-  <button onclick="showLetter()">Click this (important) 💌</button>
+    I don’t think you even realize how easily you become important to someone.<br><br>
 
-  <div id="letter" class="card hidden">
-    <p>
-      Prachu,<br><br>
+    You’re chaotic, unpredictable, annoying sometimes…<br>
+    but also the kind of person someone quietly holds on to.<br><br>
 
-      I don’t think you even realize how effortlessly you become important to people.<br><br>
+    Those BGMI games weren’t just games…<br>
+    they were little moments where everything felt lighter.<br><br>
 
-      You’re annoying sometimes… chaotic almost always…<br>
-      but also the kind of person someone doesn’t want to lose.<br><br>
+    I don’t know what this is exactly…<br>
+    but I know I don’t want to lose it.<br><br>
 
-      Playing games with you wasn’t just about winning…<br>
-      it was about those random laughs, those “bas kyaaaa” moments,<br>
-      and the way you somehow made everything lighter.<br><br>
+    — Aditya
+  </p>
+</div>
 
-      I don’t know what this is exactly…<br>
-      but I do know this —<br>
-      you matter more than you think.<br><br>
+<!-- mini interaction -->
+<div class="card">
+  <p>Catch the star ⭐ (just for fun)</p>
+  <div id="catchBox"></div>
+</div>
 
-      And I’m really glad…<br>
-      out of all people,<br>
-      it’s you.<br><br>
-
-      — Aditya
-    </p>
-  </div>
-
+<!-- FINAL BUTTON -->
+<div class="card">
+  <button onclick="explodeLove()">Last click 💖</button>
 </div>
 
 <script>
-// floating hearts
-setInterval(() => {
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerText = "💖";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.fontSize = (10 + Math.random() * 20) + "px";
-  document.body.appendChild(heart);
 
-  setTimeout(() => heart.remove(), 6000);
-}, 500);
+// floating hearts always
+setInterval(()=>{
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerText="💖";
+  h.style.left=Math.random()*100+"vw";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+},400);
 
-function showLetter() {
+// reveal text
+function showMessage(){
+  document.getElementById("msg").classList.remove("hidden");
+}
+
+function showLetter(){
   document.getElementById("letter").classList.remove("hidden");
+}
+
+// mini game
+let box=document.getElementById("catchBox");
+
+setInterval(()=>{
+  let star=document.createElement("div");
+  star.className="star";
+  star.innerText="⭐";
+  star.style.left=Math.random()*60+"px";
+  star.style.top="0px";
+
+  box.appendChild(star);
+
+  let fall=setInterval(()=>{
+    star.style.top=(star.offsetTop+3)+"px";
+
+    if(star.offsetTop>50){
+      star.remove();
+      clearInterval(fall);
+    }
+  },20);
+
+  star.onclick=()=>{
+    star.remove();
+    clearInterval(fall);
+  }
+
+},1000);
+
+// FINAL LOVE EXPLOSION
+function explodeLove(){
+  for(let i=0;i<50;i++){
+    let l=document.createElement("div");
+    l.className="love";
+    l.innerText = Math.random()>0.5 ? "I love you 💖" : "💋";
+    l.style.left=Math.random()*100+"vw";
+    l.style.top=Math.random()*100+"vh";
+    document.body.appendChild(l);
+
+    setTimeout(()=>l.remove(),1500);
+  }
 }
 </script>
 
