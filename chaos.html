@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chaos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Certified Chaotic Prachu 💀</h1>
+
+<div class="card">
+  <button onclick="randomMessage()">Click me 👀</button>
+  <p id="text"></p>
+</div>
+
+<a href="letter.html"><button>Final →</button></a>
+
+<script>
+function randomMessage(){
+  const msgs = [
+    "bas kyaaaa 😭",
+    "why are you like this??",
+    "stop being cute and annoying at same time",
+    "you’re literally chaos in human form"
+  ];
+  document.getElementById("text").innerText =
+    msgs[Math.floor(Math.random()*msgs.length)];
+}
+</script>
+
+</body>
+</html>
