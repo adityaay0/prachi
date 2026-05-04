@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Prachu 💌</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', cursive;
+  background: linear-gradient(120deg, #ffd6e0, #ffe8f0);
+  overflow-x: hidden;
+  text-align: center;
+  color: #333;
+}
+
+/* floating hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 20px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.container {
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.card {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ff7aa2;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Hey Prachu 💖</h1>
+
+  <div class="card">
+    <p>
+      bas kyaaaa… 😭<br><br>
+      I still don’t understand how someone can be this chaotic and still be my favorite person.
+      Like genuinely… how?
+    </p>
+  </div>
+
+  <div class="card">
+    <p>
+      You remember those BGMI matches?<br><br>
+      Half the time we were playing seriously…<br>
+      and the other half you were just being you 💀<br><br>
+      And somehow… those moments became my favorite.
+    </p>
+  </div>
+
+  <div class="card">
+    <p>
+      I don’t say this often…<br><br>
+      but you make normal days feel less normal.<br>
+      And chaos feel… kinda peaceful.
+    </p>
+  </div>
+
+  <button onclick="showLetter()">Click this (important) 💌</button>
+
+  <div id="letter" class="card hidden">
+    <p>
+      Prachu,<br><br>
+
+      I don’t think you even realize how effortlessly you become important to people.<br><br>
+
+      You’re annoying sometimes… chaotic almost always…<br>
+      but also the kind of person someone doesn’t want to lose.<br><br>
+
+      Playing games with you wasn’t just about winning…<br>
+      it was about those random laughs, those “bas kyaaaa” moments,<br>
+      and the way you somehow made everything lighter.<br><br>
+
+      I don’t know what this is exactly…<br>
+      but I do know this —<br>
+      you matter more than you think.<br><br>
+
+      And I’m really glad…<br>
+      out of all people,<br>
+      it’s you.<br><br>
+
+      — Aditya
+    </p>
+  </div>
+
+</div>
+
+<script>
+// floating hearts
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerText = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (10 + Math.random() * 20) + "px";
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 6000);
+}, 500);
+
+function showLetter() {
+  document.getElementById("letter").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
