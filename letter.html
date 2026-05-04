@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For You</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Prachu 💖</h1>
+
+<div class="card">
+  I don’t know what this is exactly…<br><br>
+
+  but I know this —<br>
+  you matter more than you think.<br><br>
+
+  and I’m really glad…<br>
+  it’s you.
+  <br><br>
+  — Aditya
+</div>
+
+<button onclick="explode()">Click this 💖</button>
+
+<script>
+function explode(){
+  for(let i=0;i<120;i++){
+    let el=document.createElement("div");
+    el.className="love";
+
+    el.innerText = Math.random()>0.5 ? "I love you 💖" : "💋";
+
+    el.style.left=Math.random()*100+"vw";
+    el.style.top=Math.random()*100+"vh";
+
+    document.body.appendChild(el);
+
+    // stays for 15 sec
+    setTimeout(()=>el.remove(),15000);
+  }
+}
+</script>
+
+</body>
+</html>
